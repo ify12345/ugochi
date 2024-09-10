@@ -12,8 +12,8 @@ export const Why = () => {
         {"Serving clients and offering expert consultation services!"}
       </p>
 
-      <div className="grid lg:grid-cols-3 gap-4 mx-auto items-center justify-center">
-        <div className="flex-col flex items-center justify-center">
+      <div className="grid lg:grid-cols-3 gap-10 mx-auto items-center justify-center">
+        <div className="flex-col flex items-center justify-center w-[300px] gap-3">
           <GiClockwork size={24} />
           <p className="text-[24px] font-bold text-center">
             Insane 48 Hour Turnaround
@@ -24,7 +24,7 @@ export const Why = () => {
           </p>
         </div>
 
-        <div className="flex-col flex items-center justify-center">
+        <div className="flex-col flex items-center justify-center w-[300px] gap-3">
           <MdPerson3 size={24} />
           <p className="text-[24px] font-bold text-center">
             Top tier attorneys.
@@ -35,7 +35,7 @@ export const Why = () => {
           </p>
         </div>
 
-        <div className="flex-col flex items-center justify-center">
+        <div className="flex-col flex items-center justify-center w-[300px] gap-3">
           <GiJetpack size={24} />
           <p className="text-[24px] font-bold text-center">
             Fast, zero-hassle process
@@ -47,8 +47,8 @@ export const Why = () => {
         </div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-4 mx-auto mt-8 justify-center px-40 items-center">
-        <div className="flex-col flex items-center justify-center">
+      <div className="grid lg:grid-cols-2 gap-8 mx-auto mt-8 justify-center px-40 items-center">
+        <div className="flex-col flex items-center justify-center w-[300px] gap-3">
           <GoLaw size={24} />
           <p className="text-[24px] font-bold text-center">
             Want to file a lawsuit as well?
@@ -59,7 +59,7 @@ export const Why = () => {
           </p>
         </div>
 
-        <div className="flex-col flex items-center justify-center">
+        <div className="flex-col flex items-center justify-center w-[300px] gap-3">
           <ImPriceTags size={24} />
           <p className="text-[24px] font-bold text-center">$199 Per Letter</p>
           <p className="text-[14px] font-light text-center">

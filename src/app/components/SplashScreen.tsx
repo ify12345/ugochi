@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
 function Splashscreen({ children }: any) {
@@ -13,25 +12,16 @@ function Splashscreen({ children }: any) {
   }, []);
   return show ? (
     <div
-      className="h-[100] w-[100vw],
-        background-"#fff",
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-        justifyContent: "center",
-        color: "#fff",
-        position: "fixed",
-        top: 0,
-      }}
+      className="h-[100vh] w-[100vw] bg-[#fff] flex items-center  flex-col justify-center"
     >
-      <img
-        // objectFit="cover"
-        width={300}
+      <Image
+        objectFit="cover"
+        width={150}
         height={150}
-        style={{ objectFit: "contain" }}
-        src="/img/loading.gif"
+        style={{objectFit: "contain" }}
+        src="/img/Gavel.gif"
+        alt="loader"
       />
-      <Typography mt={2}>Your best choice now</Typography>
     </div>
   ) : (
     <>{children}</>

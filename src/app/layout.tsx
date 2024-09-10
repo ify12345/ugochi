@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import NextTopLoader from "nextjs-toploader";
+import Splashscreen from "./components/SplashScreen";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -40,7 +41,7 @@ export default function RootLayout({
           speed={200}
           shadow="0 0 10px #987950,0 0 5px #987952"
         />
-        {children}
+        <Splashscreen>{children}</Splashscreen>
       </body>
     </html>
   );

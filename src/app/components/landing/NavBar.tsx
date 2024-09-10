@@ -1,13 +1,54 @@
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 
 export default function NavBar() {
-  return (
-    <nav className="flex justify-between items-center px-9">
-      <Image src="/img/logo.png" width={200} height={10} alt="ugochi" />
+  const [open, setOpen] = useState(false);
 
-      <div className="flex items-center text-[16px] font-medium gap-5">
+  const toggleNav = () => {
+    setOpen(!open);
+  };
+
+  return (
+    <nav className="flex justify-between items-center px-9 relative">
+      <Image src="/img/logo.png" width={130} height={10} alt="ugochi" />
+
+      <button
+        className="lg:hidden" 
+        onClick={toggleNav}
+        aria-label={open ? "Close menu" : "Open menu"}
+      >
+        {open ? <IoClose size={32} /> : <RxHamburgerMenu size={32} />}
+      </button>
+
+      {open && (
+        <div className="absolute top-full left-0 w-full h-screen bg-[#F4EEE4] rounded-lg flex flex-col items-center gap-6 pt-10 z-10 lg:hidden">
+          <Link href="/about" className="hover:underline">
+            About
+          </Link>
+          <Link href="/pricing" className="hover:underline">
+            Pricing
+          </Link>
+          <Link href="/about" className="hover:underline">
+            Why Ugochi and Ugochi?
+          </Link>
+          <Link href="/contact" className="hover:underline">
+            Contact
+          </Link>
+
+          <Link
+            className="block p-4 hover:bg-[#4d4d4c] transition-all duration-150 text-white bg-[#25241E]"
+            href="/"
+          >
+            Request a document
+          </Link>
+        </div>
+      )}
+
+      <div className="hidden lg:flex items-center text-[16px] font-medium gap-5">
         <Link
           href="/about"
           className="hover:scale-105 transition-all duration-300"
@@ -33,8 +74,9 @@ export default function NavBar() {
           Contact
         </Link>
       </div>
+
       <Link
-        className="p-4 hover:bg-[#4d4d4c] transition-all duration-150 text-white bg-[#25241E] rounded-tl-3xl rounded-br-3xl"
+        className="hidden lg:block p-4 hover:bg-[#4d4d4c] transition-all duration-150 text-white bg-[#25241E] rounded-tl-3xl rounded-br-3xl"
         href="/"
       >
         Request a document
