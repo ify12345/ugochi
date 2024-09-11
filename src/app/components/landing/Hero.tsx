@@ -1,30 +1,41 @@
-import Image from "next/image";
+
 import React from "react";
+import Text from "../Text";
+import Button from "../Button";
 
 export default function Hero() {
   return (
     <div className="lg:justify-center items-center mx-auto flex flex-col">
-      <h1 className="lg:leading-[64px] text-3xl lg:text-[64px] max-w-[800px] text-center">
+      <Text variant="primary" size="lg" className="max-w-[800px]  capitalize ">
         HIGH QUALITY LEGAL CONSULTANCY
-      </h1>
+      </Text>
 
-      <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row items-center justify-center w-full">
+      <div className="flex flex-col gap-4 lg:gap-0 lg:flex-row items-center justify-center w-full px-5">
         <span className="flex flex-col gap-4">
-        <h1 className="w-[200px]">
-          Fast, Affordable, Zero-hassle! Get local attorneys to send your legal
-          letter in 48 hours for $199.
-        </h1>
-        <button className="p-2 hover:bg-[#4d4d4c] transition-all duration-150 text-white bg-[#25241E] rounded-lg">
-            Request a letter
-        </button>
-        </span>
-        <div className="lg:w-[500px] lg:h-full w-full">
+          <Text
+            variant="primary"
+            size="md"
+            className="w-full lg:w-[400px] capitalize "
+          >
+            Fast, Affordable, Zero-hassle! Get local attorneys to send your
+            legal letter in 48 hours for $199.
+          </Text>
 
-        <Image src="/img/law.png" width={500} height={10} alt="ugochi" />
+          <Button variant="primary" className="block p-4">
+            Request a letter
+          </Button>
+        </span>
+        <div className="lg:h-full max-w-full flex justify-center">
+          <img src="/img/law.png" className="w-full lg:w-[400px]" alt="ugochi" />
         </div>
-        <h1 className="w-[200px] lg:-mt-[260px]">
-          Your letter is sent via E-mail and fedex,downloadable certified legal signatures.
-        </h1>
+        <Text
+          variant="primary"
+          size="md"
+          className="w-full lg:w-[400px] capitalize lg:-mt-[260px]"
+        >
+          Your letter is sent via E-mail and fedex,downloadable certified legal
+          signatures.
+        </Text>
       </div>
     </div>
   );

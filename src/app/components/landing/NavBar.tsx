@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
+import Button from "../Button";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function NavBar() {
       <Image src="/img/logo.png" width={130} height={10} alt="ugochi" />
 
       <button
-        className="lg:hidden" 
+        className="lg:hidden"
         onClick={toggleNav}
         aria-label={open ? "Close menu" : "Open menu"}
       >
@@ -39,12 +40,12 @@ export default function NavBar() {
             Contact
           </Link>
 
-          <Link
-            className="block p-4 hover:bg-[#4d4d4c] transition-all duration-150 text-white bg-[#25241E]"
-            href="/"
+          <Button
+            variant="primary"
+            className="block lg:hidden p-4"
           >
             Request a document
-          </Link>
+          </Button>
         </div>
       )}
 
@@ -75,12 +76,18 @@ export default function NavBar() {
         </Link>
       </div>
 
-      <Link
-        className="hidden lg:block p-4 hover:bg-[#4d4d4c] transition-all duration-150 text-white bg-[#25241E] rounded-tl-3xl rounded-br-3xl"
+      {/* <Link
+        className="hidden lg:block p-4  rounded-tl-3xl rounded-br-3xl"
         href="/"
       >
         Request a document
-      </Link>
+      </Link> */}
+      <Button
+        variant="primary"
+        className="hidden lg:block p-4  rounded-tl-3xl rounded-br-3xl"
+      >
+        Request a document
+      </Button>
     </nav>
   );
 }
