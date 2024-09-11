@@ -15,7 +15,9 @@ export default function NavBar() {
 
   return (
     <nav className="flex justify-between items-center px-9 relative">
-      <Image src="/img/logo.png" width={130} height={10} alt="ugochi" />
+      <Link href="/">
+        <Image src="/img/logo.png" width={130} height={10} alt="ugochi" />
+      </Link>
 
       <button
         className="lg:hidden"
@@ -26,7 +28,7 @@ export default function NavBar() {
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 w-full h-screen bg-[#F4EEE4] rounded-lg flex flex-col items-center gap-6 pt-10 z-10 lg:hidden">
+        <div className="absolute top-full left-0 w-full h-screen bg-[#F4EEE4] rounded-lg flex flex-col items-center gap-6 pt-10 z-50 lg:hidden">
           <Link href="/about" className="hover:underline">
             About
           </Link>
@@ -36,15 +38,14 @@ export default function NavBar() {
           <Link href="/about" className="hover:underline">
             Why Ugochi and Ugochi?
           </Link>
-          <Link href="/contact" className="hover:underline">
+          <Link href="/request" className="hover:underline">
             Contact
           </Link>
 
-          <Button
-            variant="primary"
-            className="block lg:hidden p-4"
-          >
-            Request a document
+          <Button variant="primary" className="block lg:hidden p-4">
+            <Link href="/request" className="hover:underline">
+              Request a document
+            </Link>
           </Button>
         </div>
       )}
@@ -62,18 +63,23 @@ export default function NavBar() {
         >
           Pricing
         </Link>
-        <Link
+        {/* <Link
           href="/about"
           className="hover:scale-105 transition-all duration-300"
         >
           Why Ugochi and Ugochi?
-        </Link>
-        <Link
-          href="/contact"
-          className="hover:scale-105 transition-all duration-300"
-        >
-          Contact
-        </Link>
+        </Link> */}
+        <div className="flex">
+          <Link
+            href="/request"
+            className="hover:scale-105 transition-all duration-300 border-r border-black px-3"
+          >
+            Contact
+          </Link>
+          <a className="border-l border-black px-3" href="sms:+2348032816755">
+            (+234) 803 281 6755
+          </a>
+        </div>
       </div>
 
       {/* <Link
@@ -86,7 +92,9 @@ export default function NavBar() {
         variant="primary"
         className="hidden lg:block p-4  rounded-tl-3xl rounded-br-3xl"
       >
-        Request a document
+        <Link href="/request" className="">
+          Request a document
+        </Link>
       </Button>
     </nav>
   );

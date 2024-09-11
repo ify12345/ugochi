@@ -1,5 +1,6 @@
 
 import React from "react";
+import Link from "next/link";
 import Text from "../Text";
 import Button from "../Button";
 
@@ -22,7 +23,10 @@ export default function Hero() {
           </Text>
 
           <Button variant="primary" className="block p-4">
+          <Link href="/request" className="">
+            
             Request a letter
+          </Link>
           </Button>
         </span>
         <div className="lg:h-full max-w-full flex justify-center">

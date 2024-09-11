@@ -5,6 +5,8 @@ import Hero from '../components/landing/Hero'
 import { Why } from '../components/landing/Why'
 import { Testimonial } from '../components/landing/Testimonial'
 import { How } from '../components/landing/How'
+import { Request } from '../components/landing/Request'
+import { Footer } from '../components/landing/Footer'
 
 export default function Landing(){
   return (
@@ -14,6 +16,8 @@ export default function Landing(){
         <Why/>
         <Testimonial/>
         <How/>
+        <Request/>
+        <Footer/>
     </div>
   )
 }

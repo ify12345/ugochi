@@ -9,12 +9,12 @@ import Text from "../Text";
 
 export const How = () => {
   return (
-    <div className="justify-center items-center mx-auto flex flex-col gap-5 w-full">
+    <div className="justify-center items-center mx-auto flex flex-col gap-5 w-full my-5 lg:px-[80px]">
       <Text variant="primary" size="lg" className="max-w-[800px]  capitalize ">
         {"Here's how it works"}
       </Text>
 
-      <div className="grid lg:grid-cols-3 gap-4 mx-auto items-center justify-center">
+      <div className="grid lg:grid-cols-3 gap-4 mx-auto items-center justify-center px-10 lg:px-0">
         <div className="flex-col flex items-center justify-center">
           <div className="rounded-lg flex items-center justify-center bg-stone-200 p-3">
             <GiSwanBreeze size={24} color="#987952" />
@@ -114,8 +114,9 @@ export const How = () => {
             size="sm"
             className="max-w-[800px]  capitalize"
           >
-            Your letter is sent out via USPS, certified, signature required. If
-            the opposition responds, it's immediately forwarded to you.
+            {
+              "Your letter is sent out via USPS, certified, signature required. If the opposition responds, it's immediately forwarded to you."
+            }
           </Text>
         </div>
       </div>
