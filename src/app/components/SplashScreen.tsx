@@ -11,17 +11,8 @@ function Splashscreen({ children }: any) {
     }, 900);
   }, []);
   return show ? (
-    <div
-      className="h-[100vh] w-[100vw] bg-[#fff] flex items-center  flex-col justify-center"
-    >
-      <Image
-        objectFit="cover"
-        width={150}
-        height={150}
-        style={{objectFit: "contain" }}
-        src="/img/Gavel.gif"
-        alt="loader"
-      />
+    <div className="h-[100vh] w-[100vw] bg-[#fff] flex items-center  flex-col justify-center">
+      <img className="size-[150px]" src="/img/loader.gif" alt="loader" />
     </div>
   ) : (
     <>{children}</>

@@ -6,7 +6,11 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import Button from "../Button";
 
-export default function NavBar() {
+type NavBarProps = {
+  hideRequestButton?: boolean;
+};
+
+export default function NavBar({ hideRequestButton}:NavBarProps) {
   const [open, setOpen] = useState(false);
 
   const toggleNav = () => {
@@ -42,11 +46,13 @@ export default function NavBar() {
             Contact
           </Link>
 
-          <Button variant="primary" className="block lg:hidden p-4">
-            <Link href="/request" className="hover:underline">
-              Request a document
-            </Link>
-          </Button>
+          {!hideRequestButton && (
+            <Button variant="primary" className="block lg:hidden p-4">
+              <Link href="/request" className="hover:underline">
+                Request a document
+              </Link>
+            </Button>
+          )}
         </div>
       )}
 
@@ -88,14 +94,16 @@ export default function NavBar() {
       >
         Request a document
       </Link> */}
-      <Button
-        variant="primary"
-        className="hidden lg:block p-4  rounded-tl-3xl rounded-br-3xl"
-      >
-        <Link href="/request" className="">
-          Request a document
-        </Link>
-      </Button>
+       {!hideRequestButton && (
+        <Button
+          variant="primary"
+          className="hidden lg:block p-4  rounded-tl-3xl rounded-br-3xl"
+        >
+          <Link href="/request" className="">
+            Request a document
+          </Link>
+        </Button>
+      )}
     </nav>
   );
 }
