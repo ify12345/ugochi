@@ -46,6 +46,7 @@ export const Footer = () => {
             className="hover:scale-105 transition-all duration-300"
           >
             Home
+            
           </Link>
           <Link
             href="/pricing"
