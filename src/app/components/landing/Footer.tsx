@@ -67,8 +67,8 @@ export const Footer = () => {
             >
               Contact
             </Link>
-            <a className="border-l border-black px-3" href="sms:+2348032816755">
-              (+234) 803 281 6755
+            <a className="border-l border-black px-3" href="sms:+2348035133047">
+              (+234) 803 513 3047
             </a>
           </div>
         </div>

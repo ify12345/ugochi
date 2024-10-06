@@ -47,11 +47,17 @@ export default function NavBar({ hideRequestButton}:NavBarProps) {
           </Link>
 
           {!hideRequestButton && (
+            <div className="gap-3 flex flex-col items-center">
+               <Link href="/login" className="hover:underline font-extrabold">
+                Login
+              </Link>
+
             <Button variant="primary" className="block lg:hidden p-4">
-              <Link href="/request" className="hover:underline">
+              <Link href="/request" className="">
                 Request a document
               </Link>
             </Button>
+            </div>
           )}
         </div>
       )}
@@ -82,8 +88,8 @@ export default function NavBar({ hideRequestButton}:NavBarProps) {
           >
             Contact
           </Link>
-          <a className="border-l border-black px-3" href="sms:+2348032816755">
-            (+234) 803 281 6755
+          <a className="border-l border-black px-3" href="sms:+2348035133047">
+              (+234) 803 513 3047
           </a>
         </div>
       </div>
@@ -95,14 +101,20 @@ export default function NavBar({ hideRequestButton}:NavBarProps) {
         Request a document
       </Link> */}
        {!hideRequestButton && (
+        <div className="lg:flex items-center hidden gap-5">
+          <Link href="/login" className="hover:underline font-extrabold">
+          Login
+          </Link>
+
         <Button
           variant="primary"
-          className="hidden lg:block p-4  rounded-tl-3xl rounded-br-3xl"
+          className="p-4  rounded-tl-3xl rounded-br-3xl"
         >
           <Link href="/request" className="">
             Request a document
           </Link>
         </Button>
+        </div>
       )}
     </nav>
   );
